@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="json-simple-1.1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/java_libr/json-simple-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/java_libr/jbcrypt-0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

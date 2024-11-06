@@ -24,7 +24,6 @@ public class MainPage implements ActionListener {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JFrame viewFrame = new JFrame();
-    JPanel viewPanel = new JPanel();
 
     JLabel hello_label = new JLabel();
     JButton view_button = new JButton("Вывести все записи");
@@ -120,6 +119,7 @@ public class MainPage implements ActionListener {
         if(e.getSource() == view_button) {
             frame.dispose();
 
+            JPanel viewPanel = new JPanel();
             viewFrame.add(viewPanel);
 
             viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -131,7 +131,6 @@ public class MainPage implements ActionListener {
             exit_button.setFocusable(false);
             exit_button.addActionListener(this);
             viewPanel.add(exit_button);
-
             int y_position = 40;
             for (String line : lines) {
                 JLabel machineInfo = new JLabel();
@@ -147,11 +146,11 @@ public class MainPage implements ActionListener {
                 y_position += 30;
             }
 
-
-
         }
+
         else if (e.getSource() == exit_button) {
             viewFrame.dispose();
+
             try {
                 showMenu(user);
             } catch (Exception ex) {
